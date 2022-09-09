@@ -18,6 +18,21 @@ public class LakeInvite {
 		impl.save("madiwala lake");
 		impl.save("nagavara lake");
 		impl.printAllLakes();
+		System.out.println();
+		impl.updateByIndex("krs", 2);
+		impl.printAllLakes();
+		System.out.println();
+		impl.deleteByName("agra lake");
+		impl.printAllLakes();
+		System.out.println();
+		impl.updateByIndex("cilika", 8);
+		impl.printAllLakes();
+		System.out.println();
+		impl.updateByName("hebbal lake", "sardar sarobar");
+		impl.printAllLakes();
+
+
+		
 
 	}
 
