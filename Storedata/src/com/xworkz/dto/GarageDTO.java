@@ -1,6 +1,11 @@
 package com.xworkz.dto;
 
-public class GarageDTO {
+import java.io.Serializable;
+
+import lombok.Data;
+
+@Data
+public class GarageDTO implements Serializable {
 
 	private String name;
 	private String owner;
