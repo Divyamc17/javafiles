@@ -79,12 +79,36 @@ public class SuperMarketServiceImpl implements SuperMarketService {
 		}
 
 		@Override
-		public void validateAndSave(List<SuperMarketDTO> dto) {
+		public void validateAndSave(List<SuperMarketDTO> list) {
 			SuperMarketRepository rep=new SuperMarketRepositoryImpl();
-			rep.validateAndSave(dto);
+			rep.validateAndSave(list);
 		}
-		
-		
+		@Override
+		public SuperMarketDTO findByName(String name) {
+			SuperMarketRepository supr=new SuperMarketRepositoryImpl();
+			return supr.findByName(name); 
+			
+		}
+		@Override
+		public SuperMarketDTO findById(int id) {
+			SuperMarketRepository supr1=new SuperMarketRepositoryImpl();
+			return supr1.findById(id);
+		}
+		@Override
+		public List<SuperMarketDTO> findAll() {
+			SuperMarketRepository supr1=new SuperMarketRepositoryImpl();
+			return supr1.findAll();
+		}
+		@Override
+		public List<SuperMarketDTO> findByType(String type) {
+			SuperMarketRepository supr1=new SuperMarketRepositoryImpl();
+			return  supr1.findByType(type);
+		}
+		@Override
+		public List<SuperMarketDTO> findByPincode(String type, int pincode) {
+			SuperMarketRepository supr1=new SuperMarketRepositoryImpl();
+			return supr1.findByPincode(type, pincode);
+		}
 	}
 
 
