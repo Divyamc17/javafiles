@@ -1,6 +1,8 @@
 package com.xworkz.service;
 
 
+import java.util.Optional;
+
 import com.xworkz.entity.StadiumEntity;
 import com.xworkz.repository.StadiumRepository;
 
@@ -8,7 +10,7 @@ public class StadiumServiceImpl implements  StadiumService{
 
 private StadiumRepository repo;
 	
-	public StadiumServiceImpl(StadiumRepository repo) {
+	public StadiumServiceImpl() {
 		this.repo=repo;
 		System.out.println("create"+this.getClass().getSimpleName());
 	}
@@ -57,6 +59,15 @@ private StadiumRepository repo;
 		
 		
 		return repo.save(entity);
+	}
+
+	@Override
+	public Optional<StadiumEntity> findById(int id) {
+       if(id>0) {
+    	   return this.repo.findfById(id);
+       }
+       
+		return Optional.empty();
 	}
 
 	

@@ -1,5 +1,7 @@
 package com.xworkz.service;
 
+import java.util.Optional;
+
 import com.xworkz.entity.HumanEntity;
 import com.xworkz.repository.HumanRepository;
 
@@ -122,6 +124,13 @@ public class HumanServiceImpl implements HumanService {
 				
 				
 		return repo.save(entity);
+	}
+	@Override
+	public Optional<HumanEntity> findById(int id) {
+		if(id>0) {
+			return this.repo.findById(id);
+		}
+		return Optional.empty();
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.xworkz.main;
 
+import java.util.Optional;
+
 import com.xworkz.entity.StadiumEntity;
 import com.xworkz.num.Stadium;
 import com.xworkz.repository.StadiumRepository;
@@ -11,15 +13,25 @@ public class StadiumInvite {
 
 	public static void main(String[] args) {
      
-		StadiumEntity ent = new StadiumEntity(1, "Kanteerava", 1988, 5000, 350,Stadium.INNERGROUND);
+		/*StadiumEntity ent = new StadiumEntity(1, "Kanteerava", 1988, 5000, 350,Stadium.INNERGROUND);
 
-		StadiumRepository repository = new StadiumRepositoryImpl();
+		StadiumRepository repository = new StadiumServiceImpl();
 
 		StadiumService serv = new StadiumServiceImpl(repository);
 		serv.validateAndSave(ent);
 
-		System.out.println(ent);
+		System.out.println(ent);*/
+		
+		 StadiumService service1=new StadiumServiceImpl();
+		 
+		 Optional<StadiumEntity> stadium=service1.findById(10);
+		 
+		 if(stadium.isPresent()) {
+			 StadiumEntity entity=stadium.get();
+			 System.out.println(entity);
+		 }else {
+			 System.out.println("stadium id is null");
+		 }
 
 	}
-
 }

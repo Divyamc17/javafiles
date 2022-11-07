@@ -1,5 +1,7 @@
 package com.xworkz.service;
 
+import java.util.Optional;
+
 import com.xworkz.entity.MetroEntity;
 import com.xworkz.repository.MetroRepository;
 
@@ -95,6 +97,13 @@ private MetroRepository repos;
 		return repos.save(entity);
 	
 
+	}
+	@Override
+	public Optional<MetroEntity> findByNameId(int id) {
+         if(id>0) {
+        	 return this.repos.findByNameId(id);
+         }
+		return Optional.empty();
 	}
 
 }

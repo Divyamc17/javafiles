@@ -22,7 +22,7 @@ public class StadiumEntity {
 		private int id;
 		@Column(name = "name")
 		private String name;
-		@Column(name = "foundedYear")
+		@Column(name = "founderYear")
 		private int founderYear;
 		@Column(name = "capacity")
 		private double capacity;
