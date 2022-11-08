@@ -13,40 +13,38 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="human")
+@Table(name = "human")
 public class HumanEntity {
 	@Id
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
-	@Column(name="color")
+	@Column(name = "color")
 	private String color;
-	@Column(name="gender")
+	@Column(name = "gender")
 	private String gender;
-	@Column(name="weight")
+	@Column(name = "weight")
 	private double weight;
-	@Column(name="height")
+	@Column(name = "height")
 	private double height;
-	@Column(name="eyeColor")
-	private String eyeColor;
-	@Column(name="hairColor")
-	private String hairColor;
-	@Column(name="age")
+	@Column(name = "eyecolor")
+	private String eyecolor;
+	@Column(name = "haircolor")
+	private String haircolor;
+	@Column(name = "age")
 	private int age;
-	@Column(name="marrigeStatus")
-	private boolean marrigeStatus;
-	@Column(name="temparature")
+	@Column(name = "marrigestatus")
+	private boolean marrigestatus;
+	@Column(name = "temparature")
 	private double temparature;
-	@Column(name="alive")
+	@Column(name = "alive")
 	private boolean alive;
-	@Column(name="panCard")
+	@Column(name = "panCard")
 	private String panCardNo;
-	@Column(name="aadharcard")
+	@Column(name = "aadharcard")
 	private long aadharcardNo;
-	@Column(name="voterId")
-	private String voterId;
-	
-	
+	@Column(name = "voterid")
+	private String voterid;
 
 }
